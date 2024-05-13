@@ -1,7 +1,7 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
 
 import github from "../../assets/github.svg";
-
+import anz from "../../assets/anz.svg";
 import styles from "./Layout.module.css";
 
 import { useLogin } from "../../authConfig";
@@ -14,7 +14,7 @@ const Layout = () => {
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>GPT + Enterprise data | Sample</h3>
+                        <h3 className={styles.headerTitle}>ANZ Messaging GPT</h3>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
@@ -31,12 +31,12 @@ const Layout = () => {
                             <li className={styles.headerNavLeftMargin}>
                                 <a href="https://aka.ms/entgptsearch" target={"_blank"} title="Github repository link">
                                     <img
-                                        src={github}
-                                        alt="Github logo"
-                                        aria-label="Link to github repository"
-                                        width="20px"
+                                        src={anz}
+                                        // alt="Github logo"
+                                        // aria-label="Link to github repository"
+                                        width="50px"
                                         height="20px"
-                                        className={styles.githubLogo}
+                                        // className={styles.githubLogo}
                                     />
                                 </a>
                             </li>

@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { Checkbox, Panel, DefaultButton, TextField, SpinButton, Slider } from "@fluentui/react";
 import { SparkleFilled } from "@fluentui/react-icons";
 import readNDJSONStream from "ndjson-readablestream";
+import anz from "../../assets/anz.svg";
 
 import styles from "./Chat.module.css";
 
@@ -293,9 +294,10 @@ const Chat = () => {
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
-                            <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" />
-                            <h1 className={styles.chatEmptyStateTitle}>Chat with your data</h1>
-                            <h2 className={styles.chatEmptyStateSubtitle}>Ask anything or try an example</h2>
+                            {/* <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" /> */}
+                            <img src={anz} width="770px" height="520px" />
+                            <h1 className={styles.chatEmptyStateTitle}></h1>
+                            <h2 className={styles.chatEmptyStateSubtitle}>Please enter in the message to find a template for</h2>
                             <ExampleList onExampleClicked={onExampleClicked} useGPT4V={useGPT4V} />
                         </div>
                     ) : (
@@ -361,7 +363,7 @@ const Chat = () => {
                     <div className={styles.chatInput}>
                         <QuestionInput
                             clearOnSend
-                            placeholder="Type a new question (e.g. does my plan cover annual eye exams?)"
+                            placeholder="Type a new question (e.g. please tell me how to apply for a new visa card?)"
                             disabled={isLoading}
                             onSend={question => makeApiRequest(question)}
                         />

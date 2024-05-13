@@ -84,6 +84,8 @@
     padding-left: 24px;
     padding-right: 24px;
     width: 100%;
+    /* min-height: 550px;
+    max-height: 950px; */
     max-width: 1028px;
     background: #f2f2f2;
 }
